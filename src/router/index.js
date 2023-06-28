@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
+import Prueba from '@/components/Prueba.vue';
+import Contactenos from '@/components/Contactenos.vue';
+import NosotrosView from '@/views/NosotrosView.vue';
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,21 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/nosotros',
+    name: 'nosotros',
+    component: NosotrosView
+  },
+  {
+    path: '/prueba',
+    name: 'prueba',
+    component: Prueba
+  },
+  {
+    path: '/contactenos',
+    name: 'contactenos',
+    component: Contactenos
   },
   {
     path: '/about',
@@ -20,7 +38,7 @@ const routes = [
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
